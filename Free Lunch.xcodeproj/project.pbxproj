@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823B36E32ABA3D9B00462B78 /* LunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */; };
 		BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */; };
 		BE187B1D2ABA1900008C4EE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1C2ABA1900008C4EE0 /* ContentView.swift */; };
 		BE187B1F2ABA1901008C4EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailsView.swift; sourceTree = "<group>"; };
 		BE187B172ABA1900008C4EE0 /* Free Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Free_LunchApp.swift; sourceTree = "<group>"; };
 		BE187B1C2ABA1900008C4EE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,12 +58,11 @@
 			isa = PBXGroup;
 			children = (
 				BE187B2A2ABA19B2008C4EE0 /* Base */,
-				BE187B292ABA19A1008C4EE0 /* Components */,
-				BE187B282ABA199A008C4EE0 /* Views */,
 				BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */,
 				BE187B1C2ABA1900008C4EE0 /* ContentView.swift */,
 				BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */,
 				BE187B202ABA1901008C4EE0 /* Preview Content */,
+				823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */,
 			);
 			path = "Free Lunch";
 			sourceTree = "<group>";
@@ -72,20 +73,6 @@
 				BE187B212ABA1901008C4EE0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		BE187B282ABA199A008C4EE0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		BE187B292ABA19A1008C4EE0 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		BE187B2A2ABA19B2008C4EE0 /* Base */ = {
@@ -176,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE187B1D2ABA1900008C4EE0 /* ContentView.swift in Sources */,
+				823B36E32ABA3D9B00462B78 /* LunchDetailsView.swift in Sources */,
 				BE187B2D2ABA19E2008C4EE0 /* NetWorking Manager.swift in Sources */,
 				BE187B2F2ABA1A18008C4EE0 /* EndPoints.swift in Sources */,
 				BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */,
