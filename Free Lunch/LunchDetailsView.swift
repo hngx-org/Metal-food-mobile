@@ -8,8 +8,34 @@
 import SwiftUI
 
 struct LunchDetailsView: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Detail View")
+            .navigationBarBackButtonHidden(true)
+            .navigationTitle("Lunch Details")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        HStack {
+                            Image(systemName: "chevron.backward")
+                                .tint(.black)
+                        }
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        HStack {
+                            Image(systemName: "bell")
+                                .tint(.black)
+                        }
+                    }
+                }
+            }
     }
 }
 
