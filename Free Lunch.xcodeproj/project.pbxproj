@@ -51,6 +51,9 @@
 		BE187B192ABA1900008C4EE0 /* Free Lunch */ = {
 			isa = PBXGroup;
 			children = (
+				BE187B2A2ABA19B2008C4EE0 /* Base */,
+				BE187B292ABA19A1008C4EE0 /* Components */,
+				BE187B282ABA199A008C4EE0 /* Views */,
 				BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */,
 				BE187B1C2ABA1900008C4EE0 /* ContentView.swift */,
 				BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */,
@@ -65,6 +68,27 @@
 				BE187B212ABA1901008C4EE0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE187B282ABA199A008C4EE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE187B292ABA19A1008C4EE0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BE187B2A2ABA19B2008C4EE0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
