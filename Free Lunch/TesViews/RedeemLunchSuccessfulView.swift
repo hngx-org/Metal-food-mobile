@@ -24,11 +24,14 @@ struct RedeemLunchSuccessfulView: View {
                         .multilineTextAlignment(.center)
                 Spacer()
                     .frame(maxHeight: 58)
-                Button("Back to home"){
-                    
+                Button {
+                    print("pressed")
+                } label: {
+                    Text("Back to home")
+                        .frame(maxWidth: .infinity)
                 }
-                .padding()
-                .frame(maxWidth: .infinity, idealHeight: 60)
+                .frame(height: 60)
+                .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
                 .background(Color(hex: "#390D7C"))
                 .cornerRadius(8)
