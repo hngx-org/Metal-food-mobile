@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		823B36E32ABA3D9B00462B78 /* LunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */; };
+		823B36E62ABA609500462B78 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E52ABA609500462B78 /* Color + Extension.swift */; };
+		823B36E82ABA618100462B78 /* LunchDetailsInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E72ABA618100462B78 /* LunchDetailsInstructionView.swift */; };
+		8249D86A2ABB16370087676F /* RewardSuccessOnlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249D8692ABB16370087676F /* RewardSuccessOnlyView.swift */; };
+		8249D86C2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249D86B2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift */; };
 		BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */; };
 		BE187B1D2ABA1900008C4EE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1C2ABA1900008C4EE0 /* ContentView.swift */; };
 		BE187B1F2ABA1901008C4EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailsView.swift; sourceTree = "<group>"; };
+		823B36E52ABA609500462B78 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		823B36E72ABA618100462B78 /* LunchDetailsInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailsInstructionView.swift; sourceTree = "<group>"; };
+		8249D8692ABB16370087676F /* RewardSuccessOnlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardSuccessOnlyView.swift; sourceTree = "<group>"; };
+		8249D86B2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardSuccessAndSendAnotherView.swift; sourceTree = "<group>"; };
 		BE187B172ABA1900008C4EE0 /* Free Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Free_LunchApp.swift; sourceTree = "<group>"; };
 		BE187B1C2ABA1900008C4EE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +46,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		823B36E42ABA607700462B78 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				823B36E52ABA609500462B78 /* Color + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8249D8682ABB159F0087676F /* TesViews */ = {
+			isa = PBXGroup;
+			children = (
+				823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */,
+				823B36E72ABA618100462B78 /* LunchDetailsInstructionView.swift */,
+				8249D8692ABB16370087676F /* RewardSuccessOnlyView.swift */,
+				8249D86B2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift */,
+			);
+			path = TesViews;
+			sourceTree = "<group>";
+		};
 		BE187B0E2ABA18FF008C4EE0 = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +84,13 @@
 		BE187B192ABA1900008C4EE0 /* Free Lunch */ = {
 			isa = PBXGroup;
 			children = (
+				823B36E42ABA607700462B78 /* Extension */,
 				BE187B2A2ABA19B2008C4EE0 /* Base */,
 				BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */,
 				BE187B1C2ABA1900008C4EE0 /* ContentView.swift */,
 				BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */,
 				BE187B202ABA1901008C4EE0 /* Preview Content */,
-				823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */,
+				8249D8682ABB159F0087676F /* TesViews */,
 			);
 			path = "Free Lunch";
 			sourceTree = "<group>";
@@ -162,11 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823B36E82ABA618100462B78 /* LunchDetailsInstructionView.swift in Sources */,
+				8249D86C2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift in Sources */,
+				8249D86A2ABB16370087676F /* RewardSuccessOnlyView.swift in Sources */,
 				BE187B1D2ABA1900008C4EE0 /* ContentView.swift in Sources */,
 				823B36E32ABA3D9B00462B78 /* LunchDetailsView.swift in Sources */,
 				BE187B2D2ABA19E2008C4EE0 /* NetWorking Manager.swift in Sources */,
 				BE187B2F2ABA1A18008C4EE0 /* EndPoints.swift in Sources */,
 				BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */,
+				823B36E62ABA609500462B78 /* Color + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
