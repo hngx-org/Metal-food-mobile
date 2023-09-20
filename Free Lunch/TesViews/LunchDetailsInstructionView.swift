@@ -18,7 +18,6 @@ struct LunchDetailsInstructionView: View {
                     .font(.callout)
                     .multilineTextAlignment(.center)
                     .accessibilityAddTraits(.isHeader)
-    //            Spacer()
                 HStack{
                     model.image
                         .frame(width: 50, height: 50)
