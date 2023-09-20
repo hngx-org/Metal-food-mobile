@@ -33,7 +33,7 @@ struct LunchDetailsView: View {
                 Spacer()
                     .frame(minHeight: 60 ,maxHeight: 120)
                 Button("Redeem free lunch"){
-                    
+                    print("to redeem free lunch")
                 }
                 .frame(maxWidth: .infinity, idealHeight: 60)
                 .foregroundColor(.white)
@@ -55,7 +55,7 @@ struct LunchDetailsView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            dismiss()
+                            print("notification to show")
                         } label: {
                             HStack {
                                 Image(systemName: "bell")
