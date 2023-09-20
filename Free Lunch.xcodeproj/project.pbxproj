@@ -10,8 +10,8 @@
 		823B36E32ABA3D9B00462B78 /* LunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */; };
 		823B36E62ABA609500462B78 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E52ABA609500462B78 /* Color + Extension.swift */; };
 		823B36E82ABA618100462B78 /* LunchDetailsInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E72ABA618100462B78 /* LunchDetailsInstructionView.swift */; };
-		8249D86A2ABB16370087676F /* RewardSuccessOnlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249D8692ABB16370087676F /* RewardSuccessOnlyView.swift */; };
-		8249D86C2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249D86B2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift */; };
+		8249D86A2ABB16370087676F /* RedeemLunchSuccessfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249D8692ABB16370087676F /* RedeemLunchSuccessfulView.swift */; };
+		8249D86C2ABB16500087676F /* SendLunchSuccessfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249D86B2ABB16500087676F /* SendLunchSuccessfulView.swift */; };
 		BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */; };
 		BE187B1D2ABA1900008C4EE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1C2ABA1900008C4EE0 /* ContentView.swift */; };
 		BE187B1F2ABA1901008C4EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */; };
@@ -24,8 +24,8 @@
 		823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailsView.swift; sourceTree = "<group>"; };
 		823B36E52ABA609500462B78 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		823B36E72ABA618100462B78 /* LunchDetailsInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailsInstructionView.swift; sourceTree = "<group>"; };
-		8249D8692ABB16370087676F /* RewardSuccessOnlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardSuccessOnlyView.swift; sourceTree = "<group>"; };
-		8249D86B2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardSuccessAndSendAnotherView.swift; sourceTree = "<group>"; };
+		8249D8692ABB16370087676F /* RedeemLunchSuccessfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemLunchSuccessfulView.swift; sourceTree = "<group>"; };
+		8249D86B2ABB16500087676F /* SendLunchSuccessfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLunchSuccessfulView.swift; sourceTree = "<group>"; };
 		BE187B172ABA1900008C4EE0 /* Free Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Free_LunchApp.swift; sourceTree = "<group>"; };
 		BE187B1C2ABA1900008C4EE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,8 +59,8 @@
 			children = (
 				823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */,
 				823B36E72ABA618100462B78 /* LunchDetailsInstructionView.swift */,
-				8249D8692ABB16370087676F /* RewardSuccessOnlyView.swift */,
-				8249D86B2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift */,
+				8249D8692ABB16370087676F /* RedeemLunchSuccessfulView.swift */,
+				8249D86B2ABB16500087676F /* SendLunchSuccessfulView.swift */,
 			);
 			path = TesViews;
 			sourceTree = "<group>";
@@ -191,8 +191,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				823B36E82ABA618100462B78 /* LunchDetailsInstructionView.swift in Sources */,
-				8249D86C2ABB16500087676F /* RewardSuccessAndSendAnotherView.swift in Sources */,
-				8249D86A2ABB16370087676F /* RewardSuccessOnlyView.swift in Sources */,
+				8249D86C2ABB16500087676F /* SendLunchSuccessfulView.swift in Sources */,
+				8249D86A2ABB16370087676F /* RedeemLunchSuccessfulView.swift in Sources */,
 				BE187B1D2ABA1900008C4EE0 /* ContentView.swift in Sources */,
 				823B36E32ABA3D9B00462B78 /* LunchDetailsView.swift in Sources */,
 				BE187B2D2ABA19E2008C4EE0 /* NetWorking Manager.swift in Sources */,
