@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823B36E32ABA3D9B00462B78 /* LunchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */; };
+		823B36E62ABA609500462B78 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E52ABA609500462B78 /* Color + Extension.swift */; };
+		823B36E82ABA618100462B78 /* LunchDetailsInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B36E72ABA618100462B78 /* LunchDetailsInstructionView.swift */; };
+		8249D86A2ABB16370087676F /* RedeemLunchSuccessfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249D8692ABB16370087676F /* RedeemLunchSuccessfulView.swift */; };
+		8249D86C2ABB16500087676F /* SendLunchSuccessfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249D86B2ABB16500087676F /* SendLunchSuccessfulView.swift */; };
 		BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */; };
 		BE187B1D2ABA1900008C4EE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1C2ABA1900008C4EE0 /* ContentView.swift */; };
 		BE187B1F2ABA1901008C4EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */; };
@@ -35,6 +40,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailsView.swift; sourceTree = "<group>"; };
+		823B36E52ABA609500462B78 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		823B36E72ABA618100462B78 /* LunchDetailsInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchDetailsInstructionView.swift; sourceTree = "<group>"; };
+		8249D8692ABB16370087676F /* RedeemLunchSuccessfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemLunchSuccessfulView.swift; sourceTree = "<group>"; };
+		8249D86B2ABB16500087676F /* SendLunchSuccessfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLunchSuccessfulView.swift; sourceTree = "<group>"; };
 		BE187B172ABA1900008C4EE0 /* Free Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Free_LunchApp.swift; sourceTree = "<group>"; };
 		BE187B1C2ABA1900008C4EE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +84,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		823B36E42ABA607700462B78 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				823B36E52ABA609500462B78 /* Color + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8249D8682ABB159F0087676F /* TesViews */ = {
+			isa = PBXGroup;
+			children = (
+				823B36E22ABA3D9B00462B78 /* LunchDetailsView.swift */,
+				823B36E72ABA618100462B78 /* LunchDetailsInstructionView.swift */,
+				8249D8692ABB16370087676F /* RedeemLunchSuccessfulView.swift */,
+				8249D86B2ABB16500087676F /* SendLunchSuccessfulView.swift */,
+			);
+			path = TesViews;
+			sourceTree = "<group>";
+		};
 		BE187B0E2ABA18FF008C4EE0 = {
 			isa = PBXGroup;
 			children = (
@@ -93,14 +122,14 @@
 		BE187B192ABA1900008C4EE0 /* Free Lunch */ = {
 			isa = PBXGroup;
 			children = (
+				823B36E42ABA607700462B78 /* Extension */,
 				BE187B2A2ABA19B2008C4EE0 /* Base */,
-				BE187B292ABA19A1008C4EE0 /* Components */,
-				BE187B282ABA199A008C4EE0 /* Views */,
 				BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */,
 				BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */,
 				BE6DB3EB2ABB559A00924E9A /* dashboardtrophy.png */,
 				BE6DB3EC2ABB559A00924E9A /* succestrophy.png */,
 				BE187B202ABA1901008C4EE0 /* Preview Content */,
+				8249D8682ABB159F0087676F /* TesViews */,
 			);
 			path = "Free Lunch";
 			sourceTree = "<group>";
@@ -111,38 +140,6 @@
 				BE187B212ABA1901008C4EE0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		BE187B282ABA199A008C4EE0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DB3C92ABA27F200924E9A /* DashBoard.swift */,
-				BE6DB3D12ABA41A800924E9A /* FreeLunch.swift */,
-				BE187B1C2ABA1900008C4EE0 /* ContentView.swift */,
-				BE6DB3DD2ABAE74000924E9A /* LeaderBoard.swift */,
-				BE6DB3E52ABB02DB00924E9A /* History.swift */,
-				BE6DB3E92ABB447000924E9A /* Profile.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		BE187B292ABA19A1008C4EE0 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DB3CB2ABA280100924E9A /* TabView.swift */,
-				BE6DB3CF2ABA37E300924E9A /* GreyCard.swift */,
-				BE6DB3CD2ABA2F7200924E9A /* PrimaryButtton.swift */,
-				BE6DB3D52ABA41F700924E9A /* DashBoardHeader.swift */,
-				BE6DB3D72ABA447C00924E9A /* SearchInput.swift */,
-				BE6DB3D92ABA5E9000924E9A /* Story.swift */,
-				BE6DB3DB2ABA5EEE00924E9A /* Stories.swift */,
-				BE6DB3DF2ABAEAB400924E9A /* ProgressTab.swift */,
-				BE6DB3E12ABAF53F00924E9A /* Stage.swift */,
-				BE6DB3E32ABAFB1D00924E9A /* LeaderBoardList.swift */,
-				BE6DB3E72ABB1BBC00924E9A /* DashBoardMainCard.swift */,
-				BE6DB3EF2ABB76A500924E9A /* Historylist.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		BE187B2A2ABA19B2008C4EE0 /* Base */ = {
@@ -234,12 +231,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE6DB3E62ABB02DB00924E9A /* History.swift in Sources */,
-				BE6DB3EA2ABB447000924E9A /* Profile.swift in Sources */,
-				BE6DB3E02ABAEAB400924E9A /* ProgressTab.swift in Sources */,
-				BE187B1D2ABA1900008C4EE0 /* ContentView.swift in Sources */,
-				BE6DB3DC2ABA5EEE00924E9A /* Stories.swift in Sources */,
-				BE6DB3D22ABA41A800924E9A /* FreeLunch.swift in Sources */,
 				BE187B2D2ABA19E2008C4EE0 /* NetWorking Manager.swift in Sources */,
 				BE6DB3D02ABA37E300924E9A /* GreyCard.swift in Sources */,
 				BE6DB3CA2ABA27F200924E9A /* DashBoard.swift in Sources */,
@@ -252,9 +243,6 @@
 				BE6DB3CC2ABA280100924E9A /* TabView.swift in Sources */,
 				BE6DB3D82ABA447C00924E9A /* SearchInput.swift in Sources */,
 				BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */,
-				BE6DB3D62ABA41F700924E9A /* DashBoardHeader.swift in Sources */,
-				BE6DB3DA2ABA5E9000924E9A /* Story.swift in Sources */,
-				BE6DB3E42ABAFB1D00924E9A /* LeaderBoardList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
