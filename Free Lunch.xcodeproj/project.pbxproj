@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB1AB12C2ABA485E00A2D0F7 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1AB12B2ABA485E00A2D0F7 /* SignupView.swift */; };
+
+		BE1016442ABCC72D0026F422 /* ProfileList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1016432ABCC72D0026F422 /* ProfileList.swift */; };
 		BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */; };
 		BE187B1F2ABA1901008C4EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */; };
 		BE187B222ABA1901008C4EE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE187B212ABA1901008C4EE0 /* Preview Assets.xcassets */; };
 		BE187B2D2ABA19E2008C4EE0 /* NetWorking Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B2C2ABA19E2008C4EE0 /* NetWorking Manager.swift */; };
 		BE187B2F2ABA1A18008C4EE0 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B2E2ABA1A18008C4EE0 /* EndPoints.swift */; };
 		BE92595E2ABC62A90069ACE8 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92595D2ABC62A90069ACE8 /* test.swift */; };
+		BEC55C382ABCA36900D48980 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC55C362ABCA36900D48980 /* CustomTextFieldView.swift */; };
+		BEC55C392ABCA36900D48980 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC55C372ABCA36900D48980 /* CustomButton.swift */; };
+		BEC55C3C2ABCA37700D48980 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC55C3A2ABCA37600D48980 /* SigninView.swift */; };
+		BEC55C3D2ABCA37700D48980 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC55C3B2ABCA37700D48980 /* SignupView.swift */; };
 		BED3A2552ABC7D74000177F0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BED3A2542ABC7D74000177F0 /* .gitignore */; };
 		BEDCA7582ABC4AD600F0CCA3 /* LeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCA7522ABC4AD500F0CCA3 /* LeaderBoard.swift */; };
 		BEDCA75A2ABC4AD600F0CCA3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDCA7542ABC4AD600F0CCA3 /* Profile.swift */; };
@@ -42,6 +47,8 @@
 /* Begin PBXFileReference section */
 		BB1AB12B2ABA485E00A2D0F7 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		823B36E52ABA609500462B78 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		BB1AB12B2ABA485E00A2D0F7 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		BE1016432ABCC72D0026F422 /* ProfileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileList.swift; sourceTree = "<group>"; };
 		BE187B172ABA1900008C4EE0 /* Free Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Free_LunchApp.swift; sourceTree = "<group>"; };
 		BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +56,10 @@
 		BE187B2C2ABA19E2008C4EE0 /* NetWorking Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetWorking Manager.swift"; sourceTree = "<group>"; };
 		BE187B2E2ABA1A18008C4EE0 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		BE92595D2ABC62A90069ACE8 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		BEC55C362ABCA36900D48980 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		BEC55C372ABCA36900D48980 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		BEC55C3A2ABCA37600D48980 /* SigninView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		BEC55C3B2ABCA37700D48980 /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		BED3A2542ABC7D74000177F0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		BEDCA7522ABC4AD500F0CCA3 /* LeaderBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoard.swift; sourceTree = "<group>"; };
 		BEDCA7542ABC4AD600F0CCA3 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -120,7 +131,6 @@
 				BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */,
 				BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */,
 				BE187B202ABA1901008C4EE0 /* Preview Content */,
-				BB1AB12B2ABA485E00A2D0F7 /* SignupView.swift */,
 			);
 			path = "Free Lunch";
 			sourceTree = "<group>";
@@ -153,6 +163,8 @@
 		BEDCA7762ABC4D6E00F0CCA3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BEC55C372ABCA36900D48980 /* CustomButton.swift */,
+				BEC55C362ABCA36900D48980 /* CustomTextFieldView.swift */,
 				BEDCA7802ABC4FCA00F0CCA3 /* LunchDetailsInstructionView.swift */,
 				BEDCA75E2ABC4AF500F0CCA3 /* TabView.swift */,
 				BEDCA7642ABC4B1700F0CCA3 /* DashBoardHeader.swift */,
@@ -167,6 +179,7 @@
 				BEDCA7652ABC4B1700F0CCA3 /* Stage.swift */,
 				BEDCA7672ABC4B1700F0CCA3 /* Stories.swift */,
 				BEDCA7662ABC4B1700F0CCA3 /* Story.swift */,
+				BE1016432ABCC72D0026F422 /* ProfileList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -174,6 +187,8 @@
 		BEDCA7772ABC4DD800F0CCA3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BEC55C3A2ABCA37600D48980 /* SigninView.swift */,
+				BEC55C3B2ABCA37700D48980 /* SignupView.swift */,
 				BEDCA7822ABC4FD300F0CCA3 /* SendLunchSuccessfulView.swift */,
 				BEDCA77E2ABC4FC600F0CCA3 /* RedeemLunchSuccessfulView.swift */,
 				BEDCA7842ABC505800F0CCA3 /* LunchDetailsView.swift */,
@@ -262,10 +277,12 @@
 				BEDCA75F2ABC4AF500F0CCA3 /* TabView.swift in Sources */,
 				BEDCA7792ABC4E1A00F0CCA3 /* ContentView.swift in Sources */,
 				BE92595E2ABC62A90069ACE8 /* test.swift in Sources */,
+				BEC55C392ABCA36900D48980 /* CustomButton.swift in Sources */,
 				BEDCA7812ABC4FCA00F0CCA3 /* LunchDetailsInstructionView.swift in Sources */,
 				BEDCA7742ABC4B1700F0CCA3 /* Historylist.swift in Sources */,
 				BEDCA7752ABC4B1700F0CCA3 /* PrimaryButtton.swift in Sources */,
 				BEDCA75C2ABC4AD600F0CCA3 /* History.swift in Sources */,
+				BEC55C382ABCA36900D48980 /* CustomTextFieldView.swift in Sources */,
 				BEDCA7712ABC4B1700F0CCA3 /* Story.swift in Sources */,
 				BEDCA7582ABC4AD600F0CCA3 /* LeaderBoard.swift in Sources */,
 				BE187B2D2ABA19E2008C4EE0 /* NetWorking Manager.swift in Sources */,
@@ -277,8 +294,11 @@
 				BEDCA7732ABC4B1700F0CCA3 /* DashBoardMainCard.swift in Sources */,
 				BEDCA7832ABC4FD300F0CCA3 /* SendLunchSuccessfulView.swift in Sources */,
 				BEDCA7702ABC4B1700F0CCA3 /* Stage.swift in Sources */,
+				BE1016442ABCC72D0026F422 /* ProfileList.swift in Sources */,
 				BEDCA75A2ABC4AD600F0CCA3 /* Profile.swift in Sources */,
 				BEDCA76D2ABC4B1700F0CCA3 /* SearchInput.swift in Sources */,
+				BEC55C3C2ABCA37700D48980 /* SigninView.swift in Sources */,
+				BEC55C3D2ABCA37700D48980 /* SignupView.swift in Sources */,
 				BE187B2F2ABA1A18008C4EE0 /* EndPoints.swift in Sources */,
 				BEDCA7852ABC505800F0CCA3 /* LunchDetailsView.swift in Sources */,
 				BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */,
