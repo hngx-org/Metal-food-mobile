@@ -36,3 +36,4 @@ struct Story: View {
            Story()
        }
 }
+

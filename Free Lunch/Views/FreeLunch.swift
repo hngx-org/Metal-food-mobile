@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FreeLunch: View {
-    
+    @Environment(\.dismiss) var dismiss
     @State var text: String = ""
     @State var note: String = ""
     var body: some View {
@@ -16,11 +16,19 @@ struct FreeLunch: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading,spacing: 25) {
+                    HStack {
+                        Button {
+                            dismiss()
+                        } label: {
+                                Image(systemName: "chevron.backward")
+                                    .tint(.black)
+                            }
                     Text("Give Free Lunch")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color("Primary"))
                         .frame(maxWidth: .infinity,alignment: .center)
+                }
                     Text("Select an employee you want to give free lunch for their exceptional effort.")
                         .fixedSize(horizontal: false, vertical: true)
                         .fontWeight(.semibold)
@@ -54,14 +62,19 @@ struct FreeLunch: View {
                             .cornerRadius(10)
                             .padding(.bottom,20)
                     }
-                    PrimaryButton(text: "Reward Employee")
+                    NavigationLink {
+                      SendLunchSuccessfulView()
+                    } label: {
+                        PrimaryButton(text: "Reward Employee")
+                    }
                     
                 }.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
                     .padding(.horizontal)
                     .edgesIgnoringSafeArea(.all)
             }
-            //                    .navigationTitle("Give Free Lunch")
-            //                    .navigationBarTitleDisplayMode(.large)
+            
+            .navigationBarBackButtonHidden(true)
+            
         }
     }
 }
@@ -71,3 +84,4 @@ struct FreeLunch_Previews: PreviewProvider {
         FreeLunch()
     }
 }
+

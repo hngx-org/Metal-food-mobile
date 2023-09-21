@@ -1,0 +1,21 @@
+# Ignore Xcode project files
+*.xcodeproj
+*.xcworkspace
+
+# Ignore user-specific Xcode settings
+xcuserdata/
+
+# Ignore build products and derived data
+DerivedData/
+Build/
+.build/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore user-specific settings and files
+.user*
+
+# Ignore certain files or directories
+/path/to/specific/file_or_directory
+

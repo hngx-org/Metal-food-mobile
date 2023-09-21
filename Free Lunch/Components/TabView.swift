@@ -15,7 +15,7 @@ struct TabBar: View {
                     .tabItem {
                         Image("home")
                     }
-                FreeLunch()
+                LeaderBoard()
                     .tabItem {
                         Image("trophy")
                     }
@@ -28,3 +28,4 @@ struct TabBar: View {
         }
     }
 }
+

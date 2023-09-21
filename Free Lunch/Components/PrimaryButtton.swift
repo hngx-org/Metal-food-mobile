@@ -26,3 +26,4 @@ struct PrimaryButton_Previews: PreviewProvider {
         PrimaryButton(text:"Next")
     }
 }
+

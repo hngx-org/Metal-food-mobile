@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct LeaderBoard: View {
+    @Environment(\.dismiss) var dismiss
     @State var tab: Int = 0
     var body: some View {
-        NavigationStack {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading,spacing: 25) {
-                Text("Leader Board")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("Primary"))
+                HStack {
+                    Button {
+                        dismiss()
+                    } label: {
+                            Image(systemName: "chevron.backward")
+                                .tint(.black)
+                        
+                    }
+                    Text("Leader Board")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("Primary"))
                     .frame(maxWidth: .infinity,alignment: .center)
+                }
                 Text("This is a list that shows the ranking of most rewarded employees")
                     .fixedSize(horizontal: false, vertical: true)
                     .fontWeight(.semibold)
@@ -56,7 +65,8 @@ struct LeaderBoard: View {
             }
             .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top).padding(.horizontal)
         }
-        }
+        .navigationBarBackButtonHidden(true)
+           
     }
 }
 

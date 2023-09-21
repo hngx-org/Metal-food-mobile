@@ -47,3 +47,4 @@ struct LeaderBoardList_Previews: PreviewProvider {
         LeaderBoardList()
     }
 }
+

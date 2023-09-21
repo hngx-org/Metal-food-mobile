@@ -9,15 +9,25 @@ import SwiftUI
 
 struct History: View {
     var date: String = "July 19 - August 15, 2023"
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack {
                 VStack(alignment: .leading,spacing: 25) {
                     VStack{
-                        
-                        Text("Free Lunches")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .padding(.top,60)
+                        HStack {
+                            Button {
+                                dismiss()
+                            } label: {
+                                    Image(systemName: "chevron.backward")
+                                        .tint(.black)
+                                
+                            }
+                            Text("Free Lunches")
+                                .font(.title)
+                                .fontWeight(.bold)
+  .frame(maxWidth: .infinity,alignment: .center)
+                        }
+                        .padding(.top,60)
                         HStack {
                             Text("View your free lunch history so far")
                                 .font(.title3)
@@ -64,6 +74,20 @@ struct History: View {
                     }.padding(.horizontal,10)
                         .padding(.vertical,20)
             }.edgesIgnoringSafeArea(.all)
+            //@Environment(\.dismiss) var dismiss
+            .navigationBarBackButtonHidden(true)
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button {
+//                        dismiss()
+//                    } label: {
+//                        HStack {
+//                            Image(systemName: "chevron.backward")
+//                                .tint(.black)
+//                        }
+//                    }
+//                }
+//            }
         }
     }
 }

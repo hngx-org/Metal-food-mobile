@@ -11,10 +11,9 @@ struct LunchDetailsInstructionView: View {
     var model: InstructionDetailsModel
     var body: some View {
         ZStack {
-            Color(hex: "#F5F5F5")
+            Color(.gray).opacity(0.15)
             VStack() {
                 Text("\"\(model.message)\"")
-                    .foregroundColor(Color(hex: "#3C3C3C"))
                     .font(.callout)
                     .multilineTextAlignment(.center)
                     .accessibilityAddTraits(.isHeader)

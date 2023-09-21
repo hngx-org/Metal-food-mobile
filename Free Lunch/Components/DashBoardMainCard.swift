@@ -46,3 +46,4 @@ struct DashBoardMainCard_Previews: PreviewProvider {
         DashBoardMainCard()
     }
 }
+

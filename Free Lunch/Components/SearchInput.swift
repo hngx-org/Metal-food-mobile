@@ -29,3 +29,4 @@ struct SearchInput_Previews: PreviewProvider {
         SearchInput(text: .constant("true"))
     }
 }
+

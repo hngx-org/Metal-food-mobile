@@ -40,3 +40,4 @@ struct ProgressTabs_Previews: PreviewProvider {
         ProgressTabs(position: 1)
     }
 }
+
