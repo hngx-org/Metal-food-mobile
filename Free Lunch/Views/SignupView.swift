@@ -19,20 +19,19 @@ struct SignupView: View {
                 VStack(spacing: 20) {
                     TitleAndDescriptionLabel()
                     HStack {
-                        CustomTextFieldView(username: $fullname, entryName: "First name:", placeHolder: "Tofunmi", textfieldImage: "icon-park-solid_edit-name", isSecure: false)
+                        CustomTextFieldView(username: $fullname, entryName: "First name:", placeHolder: "Tofunmi", textfieldImage: "person", isSecure: false)
                         
-                        CustomTextFieldView(username: $lastname, entryName: "Last name:", placeHolder: "Tofunmi", textfieldImage: "icon-park-solid_edit-name", isSecure: false)
+                        CustomTextFieldView(username: $lastname, entryName: "Last name:", placeHolder: "Tofunmi", textfieldImage: "person", isSecure: false)
                     }
                     
-                    CustomTextFieldView(username: $email, entryName: "Email:", placeHolder: "xyz@gmail.com", textfieldImage: "iconamoon_email-fill", isSecure: false)
+                    CustomTextFieldView(username: $email, entryName: "Email:", placeHolder: "xyz@gmail.com", textfieldImage: "mail", isSecure: false)
                     
-                    CustomTextFieldView(username: $password, entryName: "Password:", placeHolder: "********", textfieldImage: "solar_lock-password-bold", isSecure: true)
+                    CustomTextFieldView(username: $password, entryName: "Password:", placeHolder: "********", textfieldImage: "padlock", isSecure: true)
                     
                     Toggle("Remember me", isOn: $rememberMe)
                     
                     Spacer()
-                    CustomButton(title: "Create Account") {
-                    }
+                    PrimaryButton(text: "Create Account")
                     
                     HStack {
                         Text("Already have an account?")

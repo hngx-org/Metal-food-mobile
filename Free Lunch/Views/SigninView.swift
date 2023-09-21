@@ -11,24 +11,17 @@ struct SigninView: View {
     @State private var isSignUpActive = false
     
     var body: some View {
-        NavigationView {
             VStack {
                 TopLabel()
                     .padding(.bottom, 20)
-                CustomTextFieldView(username: $username, entryName: "Username:", placeHolder: "Tofunmi", textfieldImage: "icon-park-solid_edit-name", isSecure: false)
+                CustomTextFieldView(username: $username, entryName: "Username:", placeHolder: "Tofunmi", textfieldImage: "person", isSecure: false)
                     .padding(.bottom, 10)
                 
-                CustomTextFieldView(username: $password, entryName: "Password:", placeHolder: "********", textfieldImage: "eye crossed out", isSecure: true)
-                    .padding(.bottom, 10)
+                CustomTextFieldView(username: $password, entryName: "Password:", placeHolder: "********", textfieldImage: "eye", isSecure: true)
+                    .padding(.bottom, 40)
                 
-                HStack {
-                    Spacer()
-                        .foregroundColor(.yellow)
-                }
                 
-                CustomButton(title: "Sign In") {
-                }
-                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                PrimaryButton(text:  "Sign In")
                 
                 Spacer()
                 
@@ -50,7 +43,6 @@ struct SigninView: View {
             .fullScreenCover(isPresented: $isSignUpActive) {
                 SignupView()
             }
-        }
         .modifier(HideKeyboardOnTap())
     }
 }

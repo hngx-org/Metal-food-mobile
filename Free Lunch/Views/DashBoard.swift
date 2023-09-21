@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DashBoard: View {
+    @Binding var selectedTab: Int
     var image: String = "test1"
     var name: String = "David OH"
     var body: some View {
@@ -22,8 +23,8 @@ struct DashBoard: View {
                 label:{
                     GreyCard()
                 }.buttonStyle(PlainButtonStyle())
-                    NavigationLink{
-                        LeaderBoard()
+                    Button{
+                       selectedTab = 1
                     }
                 label:{
                     GreyCard(image: "leaderboard", name: "Leader Board")
@@ -31,12 +32,13 @@ struct DashBoard: View {
                 }
             }.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
                 .padding()
+            
         }
     }
 }
 
 struct DashBoard_Previews: PreviewProvider {
     static var previews: some View {
-        DashBoard()
+        DashBoard(selectedTab: .constant(0))
     }
 }
