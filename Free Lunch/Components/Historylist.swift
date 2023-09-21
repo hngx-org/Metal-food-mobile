@@ -7,18 +7,6 @@
 
 import SwiftUI
 
-//struct testi: View {
-//    @State private var shouldNavigate: Bool = false
-//    var img: String = "test1"
-//    var name: String = "You sent a free lunch to Bimpe in Recruitment department."
-//    var date: String = "August 2, 2023"
-//    var time: String = "11:30am"
-//    var debit: Bool = false
-//    var body: some View {
-//        debit ? Historylist(): Historylist2()
-//    }
-//}
-
 struct Historylist: View {
     @State private var shouldNavigate: Bool = false
     var img: String = "test1"
