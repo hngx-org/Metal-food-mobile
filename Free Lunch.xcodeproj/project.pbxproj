@@ -45,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		823B36E52ABA609500462B78 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		BB1AB12B2ABA485E00A2D0F7 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		BE1016432ABCC72D0026F422 /* ProfileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileList.swift; sourceTree = "<group>"; };
 		BE187B172ABA1900008C4EE0 /* Free Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Free_LunchApp.swift; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 				BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */,
 				BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */,
 				BE187B202ABA1901008C4EE0 /* Preview Content */,
+				BB1AB12B2ABA485E00A2D0F7 /* SignupView.swift */,
 			);
 			path = "Free Lunch";
 			sourceTree = "<group>";
