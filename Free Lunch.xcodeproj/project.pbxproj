@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1AB12C2ABA485E00A2D0F7 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1AB12B2ABA485E00A2D0F7 /* SignupView.swift */; };
 		BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */; };
 		BE187B1F2ABA1901008C4EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */; };
 		BE187B222ABA1901008C4EE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE187B212ABA1901008C4EE0 /* Preview Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB1AB12B2ABA485E00A2D0F7 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		823B36E52ABA609500462B78 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		BE187B172ABA1900008C4EE0 /* Free Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Free_LunchApp.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */,
 				BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */,
 				BE187B202ABA1901008C4EE0 /* Preview Content */,
+				BB1AB12B2ABA485E00A2D0F7 /* SignupView.swift */,
 			);
 			path = "Free Lunch";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				BE187B2F2ABA1A18008C4EE0 /* EndPoints.swift in Sources */,
 				BEDCA7852ABC505800F0CCA3 /* LunchDetailsView.swift in Sources */,
 				BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */,
+				BB1AB12C2ABA485E00A2D0F7 /* SignupView.swift in Sources */,
 				BEDCA77F2ABC4FC600F0CCA3 /* RedeemLunchSuccessfulView.swift in Sources */,
 				BEDCA76B2ABC4B1700F0CCA3 /* LeaderBoardList.swift in Sources */,
 			);
