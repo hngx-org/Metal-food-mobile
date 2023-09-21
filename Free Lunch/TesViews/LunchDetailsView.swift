@@ -73,8 +73,6 @@ struct LunchDetailsView: View {
 struct LunchDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         LunchDetailsView()
-            .previewDevice("iPhone SE (3rd generation)")
-            
     }
 }
 

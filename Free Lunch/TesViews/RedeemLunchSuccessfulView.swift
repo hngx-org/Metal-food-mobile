@@ -46,6 +46,5 @@ struct RedeemLunchSuccessfulView: View {
 struct RedeemLunchSuccessfulView_Previews: PreviewProvider {
     static var previews: some View {
         RedeemLunchSuccessfulView()
-            .previewDevice("iPhone SE (3rd generation)")
     }
 }
