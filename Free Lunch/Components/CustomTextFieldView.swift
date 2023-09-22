@@ -30,7 +30,7 @@ struct CustomTextFieldView: View {
             .padding(.horizontal, 10)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color.black, lineWidth: 0.5)
+                    .stroke(Color.black, lineWidth: 0.3)
             )
         }
     }
@@ -38,7 +38,7 @@ struct CustomTextFieldView: View {
 
 struct CustomTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTextFieldView(username: .constant(""), entryName: "Username", placeHolder: "Your username", textfieldImage: "icon-park-solid_edit-name", isSecure: false)
+        CustomTextFieldView(username: .constant(""), entryName: "Username", placeHolder: "Your username", textfieldImage: "padlock", isSecure: false)
     }
 }
 

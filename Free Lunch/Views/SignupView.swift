@@ -17,6 +17,8 @@ struct SignupView: View {
     @State private var isSigninActive = false
     @State private var isFirst = false
     
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
             NavigationView {
                 ScrollView {
@@ -86,8 +88,9 @@ struct SignupView: View {
                         HStack {
                             Text("Already have an account?")
                             Button(action: {
-                                print("Sign in tapped!")
-                                self.isSigninActive = true
+//                                self.isSigninActive = true
+                                
+                                dismiss()
                             }) {
                                 Text("Sign in")
                                     .foregroundColor(Color("Primary"))
@@ -96,9 +99,9 @@ struct SignupView: View {
                         }
                     }
                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-                    .fullScreenCover(isPresented: $isSigninActive) {
-                        SigninView()
-                }
+//                    .fullScreenCover(isPresented: $isSigninActive) {
+//                        SigninView(isSignedIn:.constant(true))
+//                }
                 }
             }
             .modifier(HideKeyboardOnTap())

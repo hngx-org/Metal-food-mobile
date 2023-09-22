@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isSignedIn = false
     var body: some View {
-//        SigninView()
-        TabBar()
+        if isSignedIn {
+            TabBar()
+        } else {
+            SigninView(isSignedIn: $isSignedIn)
+        }
     }
 }
 

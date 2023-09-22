@@ -9,6 +9,7 @@ struct SigninView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var isSignUpActive = false
+   @Binding var isSignedIn: Bool
     
     var body: some View {
             VStack {
@@ -19,9 +20,14 @@ struct SigninView: View {
                 
                 CustomTextFieldView(username: $password, entryName: "Password:", placeHolder: "********", textfieldImage: "eye", isSecure: true)
                     .padding(.bottom, 40)
+                Button {
+                    isSignedIn = true
+                } label: {
+                    
+                    PrimaryButton(text:  "Sign In")
+                }
+
                 
-                
-                PrimaryButton(text:  "Sign In")
                 
                 Spacer()
                 
@@ -48,7 +54,7 @@ struct SigninView: View {
 
 struct SigninView_Previews: PreviewProvider {
     static var previews: some View {
-        SigninView()
+        SigninView(isSignedIn: .constant(true))
     }
 }
 
