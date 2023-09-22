@@ -39,7 +39,6 @@ struct SigninView: View {
                 Spacer()
             }
             .padding()
-            .navigationBarHidden(true)
             .fullScreenCover(isPresented: $isSignUpActive) {
                 SignupView()
             }

@@ -19,7 +19,6 @@ struct Historylist: View {
             NavigationStack {
                NavigationLink (
                 destination:
-                    
                     LunchDetailsView()
                 ,isActive: $shouldNavigate,
                  label: {
@@ -94,12 +93,6 @@ struct Historylist: View {
                        )
                        
                    }
-        
-        
-        
-        
-       
-            
     }
 }
 
