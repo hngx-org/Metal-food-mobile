@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct SendLunchSuccessfulView: View {
-    
+    @EnvironmentObject var env: DashboardEnvironment
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        NavigationStack {
             ZStack {
                 Image("confetti")
                 VStack(spacing: 8) {
@@ -33,8 +32,7 @@ struct SendLunchSuccessfulView: View {
                         PrimaryButton(text: "Send another employee lunch")
                     }
                     Button {
-                           dismiss()
-                        dismiss()
+                        env.path = []
                     } label: {
                         Text("Back to home")
                             .frame(maxWidth: .infinity)
@@ -53,7 +51,6 @@ struct SendLunchSuccessfulView: View {
                 .padding(30)
             }
             .navigationBarBackButtonHidden(true)
-        }
     }
 }
 

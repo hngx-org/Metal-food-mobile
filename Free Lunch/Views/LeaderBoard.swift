@@ -10,54 +10,56 @@ import SwiftUI
 struct LeaderBoard: View {
     @State var tab: Int = 0
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack(alignment: .leading,spacing: 25) {
-             
-                    Text("Leader Board")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("Primary"))
-                    .frame(maxWidth: .infinity,alignment: .center)
-                
-                Text("This is a list that shows the ranking of most rewarded employees")
-                    .fixedSize(horizontal: false, vertical: true)
-                    .fontWeight(.semibold)
-                    .font(.body)
-                HStack{
-                    TabText(isOn:tab==0 )
-                        .onTapGesture {
-                            tab = 0
-                        }
-                    Spacer()
-                    TabText(text: "Week",isOn:tab==1 )
-                        .onTapGesture {
-                            tab = 1
-                        }
-                    Spacer()
-                    TabText(text: "All Time",isOn:tab==2)
-                        .onTapGesture {
-                            tab = 2
-                        }
-                }
-                ProgressTabs(position: tab)
-                HStack(alignment: .bottom){
-                    Stage(posImg: "2nd")
-                    Spacer()
-                    Stage(width: 100)
-                    Spacer()
-                    Stage(posImg: "3rd")
+        NavigationStack {
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(alignment: .leading,spacing: 25) {
+                 
+                        Text("Leader Board")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("Primary"))
+                        .frame(maxWidth: .infinity,alignment: .center)
                     
+                    Text("This is a list that shows the ranking of most rewarded employees")
+                        .fixedSize(horizontal: false, vertical: true)
+                        .fontWeight(.semibold)
+                        .font(.body)
+                    HStack{
+                        TabText(isOn:tab==0 )
+                            .onTapGesture {
+                                tab = 0
+                            }
+                        Spacer()
+                        TabText(text: "Week",isOn:tab==1 )
+                            .onTapGesture {
+                                tab = 1
+                            }
+                        Spacer()
+                        TabText(text: "All Time",isOn:tab==2)
+                            .onTapGesture {
+                                tab = 2
+                            }
+                    }
+                    ProgressTabs(position: tab)
+                    HStack(alignment: .bottom){
+                        Stage(posImg: "2nd")
+                        Spacer()
+                        Stage(width: 100)
+                        Spacer()
+                        Stage(posImg: "3rd")
+                        
+                    }
+                    .padding(.bottom,20)
+                    LeaderBoardList()
+                    LeaderBoardList()
+                    LeaderBoardList()
+                    LeaderBoardList()
+                    LeaderBoardList()
                 }
-                .padding(.bottom,20)
-                LeaderBoardList()
-                LeaderBoardList()
-                LeaderBoardList()
-                LeaderBoardList()
-                LeaderBoardList()
+                .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top).padding(.horizontal)
             }
-            .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top).padding(.horizontal)
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
            
     }
 }

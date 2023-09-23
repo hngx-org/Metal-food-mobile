@@ -15,15 +15,18 @@ struct TabBar: View {
                 DashBoard(selectedTab: $selectedTab)
                     .tabItem {
                         Image("home")
+                        Text("Home")
                     }.tag(0)
                 LeaderBoard()
                     .tabItem {
                         Image("trophy")
+                        Text("Rewards")
                     }.tag(1)
 
                 Profile()
                     .tabItem {
                         Image(systemName: "gearshape")
+                        Text("Settings")
                     }.tag(2)
             }
             .onAppear {
@@ -32,4 +35,3 @@ struct TabBar: View {
         }
     }
 }
-

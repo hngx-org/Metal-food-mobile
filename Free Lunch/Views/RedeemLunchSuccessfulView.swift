@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RedeemLunchSuccessfulView: View {
+    @EnvironmentObject var env: DashboardEnvironment
     var body: some View {
-        NavigationStack {
             ZStack {
                 Image("confetti")
                 VStack(spacing: 30) {
@@ -26,7 +26,7 @@ struct RedeemLunchSuccessfulView: View {
                     Spacer()
                         .frame(maxHeight: 58)
                     Button {
-                       //back to home
+                        env.path = []
                     } label: {
                         PrimaryButton(text: "Back to home")
                     }
@@ -36,7 +36,6 @@ struct RedeemLunchSuccessfulView: View {
                 .padding(30)
             }
             .navigationBarBackButtonHidden(true)
-        }
     }
 }
 

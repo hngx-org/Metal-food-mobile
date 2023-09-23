@@ -29,12 +29,15 @@ struct LeaderBoardList: View {
                         .fontWeight(.regular)
                 }
                 Spacer()
-                VStack(alignment: .leading,spacing: 5) {
+                VStack(alignment: .trailing,spacing: 5) {
                 Text(score)
                     .font(.body)
                     .fontWeight(.bold)
                     .foregroundColor(.red)
-                   Image(systemName: "arrowtriangle.down.fill")
+                   Image("arrow")
+                        .resizable()
+                        .frame(width: 12,height: 12)
+                        .padding(.trailing,5)
                 }
             }
             Divider()

@@ -7,22 +7,21 @@
 
 import SwiftUI
 
+
 struct DashBoard: View {
     @Binding var selectedTab: Int
     var image: String = "test1"
     var name: String = "David OH"
+    @StateObject var env = DashboardEnvironment()
     var body: some View {
-        NavigationStack  {
+        NavigationStack(path: $env.path)  {
             VStack(alignment: .leading,spacing: 30) {
                 DashBoardHeader()
                 DashBoardMainCard()
                 HStack {
-                    NavigationLink{
-                        FreeLunch()
-                    }
-                label:{
+                    NavigationLink(value: DashboardPath.freelunch) {
                     GreyCard()
-                }.buttonStyle(PlainButtonStyle())
+                } .buttonStyle(PlainButtonStyle())
                     Button{
                        selectedTab = 1
                     }
@@ -30,8 +29,13 @@ struct DashBoard: View {
                     GreyCard(image: "leaderboard", name: "Leader Board")
                 }.buttonStyle(PlainButtonStyle())
                 }
-            }.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
-                .padding()
+            }
+            .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
+            .padding()
+            .navigationDestination(for: DashboardPath.self) { path in
+                path
+                    .environmentObject(env)
+            }
             
         }
     }

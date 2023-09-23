@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DashBoardMainCard: View {
+    @EnvironmentObject var env: DashboardEnvironment
     var body: some View {
         
         HStack(){
@@ -19,12 +20,11 @@ struct DashBoardMainCard: View {
                 Text("You have 2 pending lunches to redeem")
                     .font(.title2)
                     .padding(.top,10)
-                NavigationLink {
-                    History()
-                } label: {
+                NavigationLink(value: DashboardPath.history) {
                     PrimaryButton(text: "Redeem")
                         .padding(.top,30)
-                }
+            } .buttonStyle(PlainButtonStyle())
+                
                 
                 
             }
@@ -37,7 +37,6 @@ struct DashBoardMainCard: View {
             .padding(.horizontal)
             .background(.yellow)
             .cornerRadius(20)
-        
     }
 }
 

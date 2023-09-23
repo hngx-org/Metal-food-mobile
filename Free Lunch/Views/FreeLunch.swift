@@ -12,8 +12,6 @@ struct FreeLunch: View {
     @State var text: String = ""
     @State var note: String = ""
     var body: some View {
-        NavigationStack {
-            
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading,spacing: 25) {
                     HStack {
@@ -62,20 +60,17 @@ struct FreeLunch: View {
                             .cornerRadius(10)
                             .padding(.bottom,20)
                     }
-                    NavigationLink {
-                      SendLunchSuccessfulView()
-                    } label: {
+                    NavigationLink(value: DashboardPath.freelunchsuccess) {
                         PrimaryButton(text: "Reward Employee")
-                    }
+                } .buttonStyle(PlainButtonStyle())
                     
+                                        
                 }.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
                     .padding(.horizontal)
                     .edgesIgnoringSafeArea(.all)
             }
             
             .navigationBarBackButtonHidden(true)
-            
-        }
     }
 }
 

@@ -12,7 +12,6 @@ struct LunchDetailsView: View {
     var sampleModel = InstructionDetailsModel(message: "Kudos to you! Your hard work and dedication have truly paid off to the department and the company at large. Keep up the fantastic work!", nameAndPosition: "Tofunmi, HR", image: Image("avatar"))
     
     var body: some View {
-        NavigationStack {
             ScrollView(showsIndicators: false) {
                 VStack {
                     Spacer()
@@ -34,10 +33,7 @@ struct LunchDetailsView: View {
                         .cornerRadius(20)
                     Spacer()
                         .frame(minHeight: 60 ,maxHeight: 120)
-                   NavigationLink(){
-                        RedeemLunchSuccessfulView()
-                    }
-                label: {
+                    NavigationLink(value: DashboardPath.redeem) {
                         PrimaryButton(text: "Lunch Details")
                         
                     }
@@ -60,8 +56,6 @@ struct LunchDetailsView: View {
             
         }
     }
-}
-
 
 struct LunchDetailsView_Previews: PreviewProvider {
     static var previews: some View {

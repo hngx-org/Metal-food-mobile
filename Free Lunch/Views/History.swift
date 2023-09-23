@@ -11,7 +11,6 @@ struct History: View {
     var date: String = "July 19 - August 15, 2023"
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        NavigationStack {
             ZStack {
                 VStack(alignment: .leading,spacing: 25) {
                     VStack{
@@ -91,7 +90,6 @@ struct History: View {
             }
         }
     }
-}
 
 struct History_Previews: PreviewProvider {
     static var previews: some View {
