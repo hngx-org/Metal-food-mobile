@@ -9,7 +9,8 @@ struct SigninView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var isSignUpActive = false
-   @Binding var isSignedIn: Bool
+    @State private var hasSignedIn = false
+    @Binding var isSignedIn: Bool
     @StateObject private var lvm = LoginVM()
     
     var body: some View {
@@ -24,16 +25,20 @@ struct SigninView: View {
                     .padding(.bottom, 40)
                 Button {
                     Task {
-                        await  lvm.loginUser()
+                        await lvm.loginUser()
+                        /// checking if login is successful with status code then login and move to dashboard
+                        let code = lvm.loginStatusCode
+                        if code == 200 {
+                            print("see code is 200")
+                            self.hasSignedIn = true
+                        } else {
+                            /// for debugging purpose
+                            print("code not 200, but \(code ?? 0)")
+                        }
                     }
-                    
                 } label: {
-                    
                     PrimaryButton(text:  "Sign In")
                 }
-                
-                
-                
                 Spacer()
                 
                 HStack {
@@ -52,6 +57,9 @@ struct SigninView: View {
             .padding()
             .fullScreenCover(isPresented: $isSignUpActive) {
                 SignupView()
+            }
+            .fullScreenCover(isPresented: $hasSignedIn) {
+                TabBar()
             }
             .modifier(HideKeyboardOnTap())
         }

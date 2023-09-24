@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8263BD3F2AC0E4C0009E6098 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263BD3E2AC0E4C0009E6098 /* SignupViewModel.swift */; };
+		8263BD412AC0EA1A009E6098 /* SignupResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263BD402AC0EA1A009E6098 /* SignupResponseModel.swift */; };
+		8263BD442AC0ECDE009E6098 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263BD432AC0ECDE009E6098 /* LoginResponseModel.swift */; };
+		8263BD462AC0ED09009E6098 /* SignupPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263BD452AC0ED09009E6098 /* SignupPayload.swift */; };
+		8263BD482AC0ED8C009E6098 /* AddBankPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263BD472AC0ED8C009E6098 /* AddBankPayload.swift */; };
+		8263BD4A2AC0EDEA009E6098 /* AddBankResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263BD492AC0EDEA009E6098 /* AddBankResponseModel.swift */; };
 		BE1016442ABCC72D0026F422 /* ProfileList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1016432ABCC72D0026F422 /* ProfileList.swift */; };
 		BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */; };
 		BE187B1F2ABA1901008C4EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */; };
@@ -48,6 +54,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8263BD3E2AC0E4C0009E6098 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		8263BD402AC0EA1A009E6098 /* SignupResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseModel.swift; sourceTree = "<group>"; };
+		8263BD432AC0ECDE009E6098 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		8263BD452AC0ED09009E6098 /* SignupPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPayload.swift; sourceTree = "<group>"; };
+		8263BD472AC0ED8C009E6098 /* AddBankPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankPayload.swift; sourceTree = "<group>"; };
+		8263BD492AC0EDEA009E6098 /* AddBankResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankResponseModel.swift; sourceTree = "<group>"; };
 		BE1016432ABCC72D0026F422 /* ProfileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileList.swift; sourceTree = "<group>"; };
 		BE187B172ABA1900008C4EE0 /* Free Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Free_LunchApp.swift; sourceTree = "<group>"; };
@@ -100,6 +112,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8263BD422AC0ECAB009E6098 /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				8263BD402AC0EA1A009E6098 /* SignupResponseModel.swift */,
+				8263BD432AC0ECDE009E6098 /* LoginResponseModel.swift */,
+				8263BD492AC0EDEA009E6098 /* AddBankResponseModel.swift */,
+			);
+			path = ResponseModel;
+			sourceTree = "<group>";
+		};
 		BE187B0E2ABA18FF008C4EE0 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				BE41A6392ABF948F00BD47F9 /* LoginVM.swift */,
+				8263BD3E2AC0E4C0009E6098 /* SignupViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -179,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				BE41A63B2ABF961F00BD47F9 /* LoginPayload.swift */,
+				8263BD452AC0ED09009E6098 /* SignupPayload.swift */,
+				8263BD472AC0ED8C009E6098 /* AddBankPayload.swift */,
 			);
 			path = PayloadModel;
 			sourceTree = "<group>";
@@ -186,6 +211,7 @@
 		BE41A63E2AC0A02D00BD47F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8263BD422AC0ECAB009E6098 /* ResponseModel */,
 				BE41A63D2ABF963B00BD47F9 /* PayloadModel */,
 			);
 			path = Models;
@@ -321,6 +347,7 @@
 				BEDCA7812ABC4FCA00F0CCA3 /* LunchDetailsInstructionView.swift in Sources */,
 				BEDCA7742ABC4B1700F0CCA3 /* Historylist.swift in Sources */,
 				BEDCA7752ABC4B1700F0CCA3 /* PrimaryButtton.swift in Sources */,
+				8263BD4A2AC0EDEA009E6098 /* AddBankResponseModel.swift in Sources */,
 				BEDCA75C2ABC4AD600F0CCA3 /* History.swift in Sources */,
 				BEC55C382ABCA36900D48980 /* CustomTextFieldView.swift in Sources */,
 				BEDCA7712ABC4B1700F0CCA3 /* Story.swift in Sources */,
@@ -330,16 +357,21 @@
 				BEDCA75B2ABC4AD600F0CCA3 /* DashBoard.swift in Sources */,
 				BEDCA75D2ABC4AD600F0CCA3 /* FreeLunch.swift in Sources */,
 				BEDCA76C2ABC4B1700F0CCA3 /* GreyCard.swift in Sources */,
+				8263BD3F2AC0E4C0009E6098 /* SignupViewModel.swift in Sources */,
 				BEDCA7722ABC4B1700F0CCA3 /* Stories.swift in Sources */,
 				BEDCA76F2ABC4B1700F0CCA3 /* DashBoardHeader.swift in Sources */,
 				BEDCA7732ABC4B1700F0CCA3 /* DashBoardMainCard.swift in Sources */,
+				8263BD482AC0ED8C009E6098 /* AddBankPayload.swift in Sources */,
 				BEDCA7832ABC4FD300F0CCA3 /* SendLunchSuccessfulView.swift in Sources */,
 				BEDCA7702ABC4B1700F0CCA3 /* Stage.swift in Sources */,
 				BE1016442ABCC72D0026F422 /* ProfileList.swift in Sources */,
+				8263BD462AC0ED09009E6098 /* SignupPayload.swift in Sources */,
 				BE41A63A2ABF948F00BD47F9 /* LoginVM.swift in Sources */,
 				BEDCA75A2ABC4AD600F0CCA3 /* Profile.swift in Sources */,
+				8263BD412AC0EA1A009E6098 /* SignupResponseModel.swift in Sources */,
 				BEDCA76D2ABC4B1700F0CCA3 /* SearchInput.swift in Sources */,
 				BEC55C3C2ABCA37700D48980 /* SigninView.swift in Sources */,
+				8263BD442AC0ECDE009E6098 /* LoginResponseModel.swift in Sources */,
 				BEC55C3D2ABCA37700D48980 /* SignupView.swift in Sources */,
 				BE187B2F2ABA1A18008C4EE0 /* EndPoints.swift in Sources */,
 				BEDCA7852ABC505800F0CCA3 /* LunchDetailsView.swift in Sources */,
@@ -475,6 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Free Lunch/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -503,6 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Free Lunch/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

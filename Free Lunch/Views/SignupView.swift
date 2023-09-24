@@ -16,10 +16,13 @@ struct SignupView: View {
     @State private var rememberMe = false
     @State private var isSigninActive = false
     @State private var isFirst = false
+    @State private var hasSignedUp = false
+    @StateObject private var viewModel = SignupViewModel()
     
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
+        LoadingOverlay(isLoading: viewModel.state == .submitting){
             NavigationView {
                 ScrollView {
                     VStack(spacing: 22) {
@@ -51,28 +54,28 @@ struct SignupView: View {
                         .frame(maxWidth: .infinity)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                             .stroke(Color("Primary"), lineWidth: 1)
-             )
+                                .stroke(Color("Primary"), lineWidth: 1)
+                        )
                         if !isFirst {
                             HStack {
-                                CustomTextFieldView(username: $fullname, entryName: "First name:", placeHolder: "enter first name", textfieldImage: "person", isSecure: false)
+                                CustomTextFieldView(username: $viewModel.signupPayload.first_name, entryName: "First name:", placeHolder: "enter first name", textfieldImage: "person", isSecure: false)
                                 
-                                CustomTextFieldView(username: $lastname, entryName: "Last name:", placeHolder: "enter first name", textfieldImage: "person", isSecure: false)
+                                CustomTextFieldView(username: $viewModel.signupPayload.last_name, entryName: "Last name:", placeHolder: "enter first name", textfieldImage: "person", isSecure: false)
                             }
                         } else {
                             CustomTextFieldView(username: $fullname, entryName: "Organization’s Name:", placeHolder: "Enter your organization’s name", textfieldImage: "person", isSecure: false)
                         }
                         
                         if !isFirst {
-                            CustomTextFieldView(username: $email, entryName: "Work Email Address:", placeHolder: "xyz@gmail.com", textfieldImage: "mail", isSecure: false)
+                            CustomTextFieldView(username: $viewModel.signupPayload.email, entryName: "Work Email Address:", placeHolder: "xyz@gmail.com", textfieldImage: "mail", isSecure: false)
                         } else {
                             CustomTextFieldView(username: $email, entryName: "Email Adress:", placeHolder: "xyz@gmail.com", textfieldImage: "mail", isSecure: false)
                         }
                         
                         VStack {
-                            CustomTextFieldView(username: $confirmPassword, entryName: "Confirm Password:", placeHolder: "********", textfieldImage: "padlock", isSecure: true)
-                            
                             CustomTextFieldView(username: $password, entryName: "Password:", placeHolder: "********", textfieldImage: "padlock", isSecure: true)
+                            
+                            CustomTextFieldView(username: $viewModel.signupPayload.password, entryName: "Confirm Password:", placeHolder: "********", textfieldImage: "padlock", isSecure: true)
                         }
                         
                         if !isFirst {
@@ -83,12 +86,28 @@ struct SignupView: View {
                         Toggle("Remember me", isOn: $rememberMe)
                         
                         Spacer()
-                        PrimaryButton(text: "Create Account")
+                        Button {
+                            Task {
+                                await viewModel.signUp()
+                                /// checking if login is successful with status code then login and move to dashboard
+                                let code = viewModel.networkStatusCode
+                                if code == 200 || code == 201 {
+                                    print("see code is 200")
+                                    self.hasSignedUp = true
+                                } else {
+                                    /// for debugging purpose
+                                    print("code not 200, but \(code ?? 0)")
+                                }
+                            }
+                        } label: {
+                            PrimaryButton(text:  "Create Account")
+                        }
+                            
                         
                         HStack {
                             Text("Already have an account?")
                             Button(action: {
-//                                self.isSigninActive = true
+                                //                                self.isSigninActive = true
                                 
                                 dismiss()
                             }) {
@@ -99,14 +118,21 @@ struct SignupView: View {
                         }
                     }
                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-//                    .fullScreenCover(isPresented: $isSigninActive) {
-//                        SigninView(isSignedIn:.constant(true))
-//                }
+                    //                    .fullScreenCover(isPresented: $isSigninActive) {
+                    //                        SigninView(isSignedIn:.constant(true))
+                    //                }
                 }
             }
             .modifier(HideKeyboardOnTap())
+            .fullScreenCover(isPresented: $hasSignedUp) {
+                TabBar()
+            }
+            .alert(isPresented: $viewModel.hasError, error: viewModel.error) {
+                
+            }
         }
     }
+}
 
 struct SignupView_Previews: PreviewProvider {
     static var previews: some View {
