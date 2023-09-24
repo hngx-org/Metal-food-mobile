@@ -28,10 +28,8 @@ class LoginVM: ObservableObject{
     @Published private(set) var userInfo : LoginResponse?
     @Published private(set) var state : SubmissionState?
     @Published private(set) var error: NetworkingManager.NetworkingError?
-//    @Published var hasError: Bool = false
-    
-//    private let validator = Validator()
-    
+    @Published var hasError: Bool = false
+  
     @MainActor
      func loginUser() async{
          do{
@@ -50,6 +48,7 @@ class LoginVM: ObservableObject{
              state = .successful
          }catch{
              print("UnSuccesful")
+             self.hasError = true
              self.state = .unsuccessful
              if let networkingError = error as? NetworkingManager.NetworkingError{
                  self.error = networkingError

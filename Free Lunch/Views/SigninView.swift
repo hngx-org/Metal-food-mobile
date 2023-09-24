@@ -55,6 +55,9 @@ struct SigninView: View {
             }
             .modifier(HideKeyboardOnTap())
         }
+        .alert(isPresented: $lvm.hasError, error: lvm.error) {
+            
+        }
     }
 }
 
