@@ -10,18 +10,34 @@ struct SigninView: View {
     @State private var password: String = ""
     @State private var isSignUpActive = false
    @Binding var isSignedIn: Bool
+    @StateObject private var lvm = LoginVM()
     
     var body: some View {
             VStack {
                 TopLabel()
                     .padding(.bottom, 20)
-                CustomTextFieldView(username: $username, entryName: "Username:", placeHolder: "Tofunmi", textfieldImage: "person", isSecure: false)
+                CustomTextFieldView(username: $lvm.person.email, entryName: "Username:", placeHolder: "Tofunmi", textfieldImage: "person", isSecure: false)
                     .padding(.bottom, 10)
                 
-                CustomTextFieldView(username: $password, entryName: "Password:", placeHolder: "********", textfieldImage: "eye", isSecure: true)
+                CustomTextFieldView(username:  $lvm.person.password, entryName: "Password:", placeHolder: "********", textfieldImage: "eye", isSecure: true)
                     .padding(.bottom, 40)
                 Button {
-                    isSignedIn = true
+                    Task {
+                      await  lvm.loginUser()
+                    }
+//                    switch lvm.state{
+//                    case .successful:
+//                       print("success")
+//                        return
+//                    case .unsuccessful:
+//                        print(lvm.error!)
+//                        return
+//                    case .submitting:
+//                        return
+//                    case .none:
+//                        print("it is null")
+//                    }
+                   
                 } label: {
                     
                     PrimaryButton(text:  "Sign In")

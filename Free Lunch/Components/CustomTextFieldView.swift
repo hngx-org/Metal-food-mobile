@@ -20,8 +20,10 @@ struct CustomTextFieldView: View {
             HStack {
                 if isSecure {
                     SecureField(placeHolder, text: $username)
+                        .autocapitalization(.none)
                 } else {
                     TextField(placeHolder, text: $username)
+                        .autocapitalization(.none)
                 }
                 Image(textfieldImage)
             }

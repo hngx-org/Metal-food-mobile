@@ -14,7 +14,7 @@ class NetworkingManager {
         
     }
     func request<T: Codable>(endpoint: EndPoint, type: T.Type) async throws  -> T{
-    
+        
         guard let url = endpoint.url else{
             throw NetworkingError.invalidUrl
         }
@@ -30,15 +30,34 @@ class NetworkingManager {
             let statusCode = (response as! HTTPURLResponse).statusCode
             throw NetworkingError.invalidStatusCode(statusCode: statusCode )
         }
-        
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
+        dump(data)
         let res = try decoder.decode(T.self , from: data)
         
         return res
         
     }
-   
+    
+    func request(endpoint: EndPoint) async throws {
+        
+        guard let url = endpoint.url else{
+            throw NetworkingError.invalidUrl
+        }
+        
+        let request = buildRequest(url: url, methodtype: endpoint.methodType)
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        dump(String(data:request.httpBody!,encoding: .utf8))
+        guard let response = response as? HTTPURLResponse,
+              (200...300) ~= response.statusCode else {
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            throw NetworkingError.invalidStatusCode(statusCode: statusCode )
+        }
+    }
+    
+    
 }
 
 
@@ -67,12 +86,12 @@ extension NetworkingManager {
         }
     }
     
-//    enum methodType{
-//        case get
-//        case post(data: Data?)
-//        case put(data: Data?)
-//        case delete(data: Data?)
-//    }
+    //    enum methodType{
+    //        case get
+    //        case post(data: Data?)
+    //        case put(data: Data?)
+    //        case delete(data: Data?)
+    //    }
     
     
     func buildRequest (url: URL, methodtype: EndPoint.MethodType) -> URLRequest{
@@ -90,6 +109,12 @@ extension NetworkingManager {
             request.httpMethod = "DELETE"
             request.httpBody = data
         }
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        if let accessToken = UserDefaults.standard.string(forKey: "accessToken") {
+            request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        }
+        
         return request
     }
 }

@@ -14,6 +14,8 @@
 		BE187B2D2ABA19E2008C4EE0 /* NetWorking Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B2C2ABA19E2008C4EE0 /* NetWorking Manager.swift */; };
 		BE187B2F2ABA1A18008C4EE0 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE187B2E2ABA1A18008C4EE0 /* EndPoints.swift */; };
 		BE41A6372ABED8B900BD47F9 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE41A6362ABED8B900BD47F9 /* AppState.swift */; };
+		BE41A63A2ABF948F00BD47F9 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE41A6392ABF948F00BD47F9 /* LoginVM.swift */; };
+		BE41A63C2ABF961F00BD47F9 /* LoginPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE41A63B2ABF961F00BD47F9 /* LoginPayload.swift */; };
 		BE92595E2ABC62A90069ACE8 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92595D2ABC62A90069ACE8 /* test.swift */; };
 		BEC55C382ABCA36900D48980 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC55C362ABCA36900D48980 /* CustomTextFieldView.swift */; };
 		BEC55C392ABCA36900D48980 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC55C372ABCA36900D48980 /* CustomButton.swift */; };
@@ -54,6 +56,8 @@
 		BE187B2C2ABA19E2008C4EE0 /* NetWorking Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetWorking Manager.swift"; sourceTree = "<group>"; };
 		BE187B2E2ABA1A18008C4EE0 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		BE41A6362ABED8B900BD47F9 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BE41A6392ABF948F00BD47F9 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		BE41A63B2ABF961F00BD47F9 /* LoginPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPayload.swift; sourceTree = "<group>"; };
 		BE92595D2ABC62A90069ACE8 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		BEC55C362ABCA36900D48980 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 		BEC55C372ABCA36900D48980 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		BE187B192ABA1900008C4EE0 /* Free Lunch */ = {
 			isa = PBXGroup;
 			children = (
+				BE41A6382ABF947600BD47F9 /* ViewModels */,
 				BEDCA7772ABC4DD800F0CCA3 /* Views */,
 				BEDCA7762ABC4D6E00F0CCA3 /* Components */,
 				823B36E42ABA607700462B78 /* Extension */,
@@ -145,6 +150,7 @@
 		BE187B2A2ABA19B2008C4EE0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				BE41A63D2ABF963B00BD47F9 /* PayloadModel */,
 				BE41A6352ABED46A00BD47F9 /* AppState */,
 				BE187B2B2ABA19CF008C4EE0 /* Api */,
 			);
@@ -166,6 +172,22 @@
 				BE41A6362ABED8B900BD47F9 /* AppState.swift */,
 			);
 			path = AppState;
+			sourceTree = "<group>";
+		};
+		BE41A6382ABF947600BD47F9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BE41A6392ABF948F00BD47F9 /* LoginVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BE41A63D2ABF963B00BD47F9 /* PayloadModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE41A63B2ABF961F00BD47F9 /* LoginPayload.swift */,
+			);
+			path = PayloadModel;
 			sourceTree = "<group>";
 		};
 		BEDCA7762ABC4D6E00F0CCA3 /* Components */ = {
@@ -283,6 +305,7 @@
 			files = (
 				BEDCA76E2ABC4B1700F0CCA3 /* ProgressTab.swift in Sources */,
 				BEDCA75F2ABC4AF500F0CCA3 /* TabView.swift in Sources */,
+				BE41A63C2ABF961F00BD47F9 /* LoginPayload.swift in Sources */,
 				BEDCA7792ABC4E1A00F0CCA3 /* ContentView.swift in Sources */,
 				BE92595E2ABC62A90069ACE8 /* test.swift in Sources */,
 				BEC55C392ABCA36900D48980 /* CustomButton.swift in Sources */,
@@ -304,6 +327,7 @@
 				BEDCA7832ABC4FD300F0CCA3 /* SendLunchSuccessfulView.swift in Sources */,
 				BEDCA7702ABC4B1700F0CCA3 /* Stage.swift in Sources */,
 				BE1016442ABCC72D0026F422 /* ProfileList.swift in Sources */,
+				BE41A63A2ABF948F00BD47F9 /* LoginVM.swift in Sources */,
 				BEDCA75A2ABC4AD600F0CCA3 /* Profile.swift in Sources */,
 				BEDCA76D2ABC4B1700F0CCA3 /* SearchInput.swift in Sources */,
 				BEC55C3C2ABCA37700D48980 /* SigninView.swift in Sources */,
