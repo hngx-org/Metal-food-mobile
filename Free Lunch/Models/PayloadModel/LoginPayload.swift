@@ -19,5 +19,5 @@ struct LoginResponse: Codable, Equatable{
     let accessToken : String?
     let email : String?
     let orgId : Int?
-    let isAdmin : Bool?
+    let isAdmin : Int?
 }
