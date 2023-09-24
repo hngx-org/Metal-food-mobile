@@ -18,7 +18,7 @@ class NetworkingManager {
         guard let url = endpoint.url else{
             throw NetworkingError.invalidUrl
         }
-        
+        print("see url currently running \(url.absoluteString)")
         
         let request = buildRequest(url: url, methodtype: endpoint.methodType)
         
@@ -31,7 +31,7 @@ class NetworkingManager {
             throw NetworkingError.invalidStatusCode(statusCode: statusCode )
         }
         let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.keyDecodingStrategy = .useDefaultKeys
         dump(data)
         let res = try decoder.decode(T.self , from: data)
         
@@ -71,7 +71,6 @@ extension NetworkingManager {
         
         var errorDescription: String?{
             switch self{
-                
             case .invalidUrl:
                 return "Url not valid"
             case .invalidStatusCode:
@@ -107,6 +106,9 @@ extension NetworkingManager {
             request.httpBody = data
         case .delete(let data):
             request.httpMethod = "DELETE"
+            request.httpBody = data
+        case .patch(data: let data):
+            request.httpMethod = "PATCH"
             request.httpBody = data
         }
         
