@@ -7,27 +7,36 @@
 //Just some placeholders
 import Foundation
 enum EndPoint{
-//    case create(submissionData: Data?)
+//        case create(submissionData: Data?)
     case detail(id: Int)
     case people(page: Int)
-    case create(loginData: Data?)
+    case signIn(loginData: Data?)
+    case signUp(data: Data?)
+    case addBank(data: Data?)
 }
 
 
 extension EndPoint{
     var host: String{"titans-food-backend.onrender.com"}
+    
     var path: String{
         switch self{
         case .people,
-                .create:
+                .signIn:
             return "/api/v1/auth/user/signin"
         case .detail(id: let id):
             return "/api/users/\(id)"
-        }}
+        case .signUp:
+            return "/api/v1/auth/user/signup"
+        case .addBank:
+            return "/api/v1/user/bank"
+        }
+    }
+    
     enum MethodType{
-        
         case get
         case post(data: Data?)
+        case patch(data: Data?)
         case put(data: Data?)
         case delete(data: Data?)
     }
@@ -46,14 +55,18 @@ extension EndPoint{
         case .people,
                 .detail:
             return .get
-        case .create(let data):
+        case .signIn(let data):
             return .post(data: data)
+        case .signUp(data: let data):
+            return .post(data: data)
+        case .addBank(data: let data):
+            return .patch(data: data)
         }
     }
     
     var url: URL? {
         var urlComponents = URLComponents()
-        urlComponents.scheme = "https" 
+        urlComponents.scheme = "https"
         urlComponents.host = host
         urlComponents.path = path
         let requestQueryItems = queryItems?.compactMap { item in
@@ -62,7 +75,7 @@ extension EndPoint{
         urlComponents.queryItems = requestQueryItems
         return urlComponents.url
     }
-    }
+}
 /////
 //func fetchTrivia() async {
 //    guard let url = URL(string: "https://opentdb.com/api.php?amount=10") else { fatalError("Missing URL") }
