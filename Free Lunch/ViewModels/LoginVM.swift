@@ -33,54 +33,34 @@ class LoginVM: ObservableObject{
 //    private let validator = Validator()
     
     @MainActor
-    func loginUser() async{
-        do{
-//            try validator.validate(person: person)
-            
-            state = .submitting
-            let encoder = JSONEncoder()
-            encoder.keyEncodingStrategy = .useDefaultKeys
-            let data = try? encoder.encode(person)
-            self.userInfo = try await NetworkingManager.shared.request(endpoint: .create(loginData: data), type: logins.self).data
-            print("Succesful")
+     func loginUser() async{
+         do{
+ //            try validator.validate(person: person)
+             
+             state = .submitting
+             let encoder = JSONEncoder()
+             encoder.keyEncodingStrategy = .useDefaultKeys
+             let data = try? encoder.encode(person)
+             self.userInfo = try await NetworkingManager.shared.request(endpoint: .create(loginData: data), type: logins.self).data
+             print("Succesful")
 
-            if let accessToken = self.userInfo?.accessToken {
-                UserDefaults.standard.setValue(self.userInfo?.accessToken, forKey: "accessToken")
-                        }
-            state = .successful
-        }catch{
-            print("UnSuccesful")
-            self.state = .unsuccessful
-            if let networkingError = error as? NetworkingManager.NetworkingError{
-                self.error = networkingError
-            } else{
-                self.error = .custom(error: error)
-            }
-            print(self.error)
-        }
-        
-    }
-}
-
-//func request(endpoint: EndPoint) async throws {
-//
-//    guard let url = endpoint.url else{
-//        throw NetworkingError.invalidUrl
-//    }
-//
-//    let request = buildRequest(url: url, methodtype: endpoint.methodType)
-//
-//    let (_, response) = try await URLSession.shared.data(for: request)
-//
-//    dump(String(data:request.httpBody!,encoding: .utf8))
-//    guard let response = response as? HTTPURLResponse,
-//          (200...300) ~= response.statusCode else {
-//        let statusCode = (response as! HTTPURLResponse).statusCode
-//        throw NetworkingError.invalidStatusCode(statusCode: statusCode )
-//    }
-//}
-
-
+             if let accessToken = self.userInfo?.accessToken {
+                 UserDefaults.standard.setValue(self.userInfo?.accessToken, forKey: "accessToken")
+                         }
+             state = .successful
+         }catch{
+             print("UnSuccesful")
+             self.state = .unsuccessful
+             if let networkingError = error as? NetworkingManager.NetworkingError{
+                 self.error = networkingError
+             } else{
+                 self.error = .custom(error: error)
+             }
+             print(self.error)
+         }
+         
+     }
+ }
 
 //func sendPostRequest(person :  LoginPayload) async throws{
 //
@@ -111,11 +91,6 @@ class LoginVM: ObservableObject{
 //    }
 //
 
-
-///
-///
-///
-///
 
 extension LoginVM {
     enum SubmissionState{

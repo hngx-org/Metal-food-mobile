@@ -16,6 +16,7 @@
 		BE41A6372ABED8B900BD47F9 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE41A6362ABED8B900BD47F9 /* AppState.swift */; };
 		BE41A63A2ABF948F00BD47F9 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE41A6392ABF948F00BD47F9 /* LoginVM.swift */; };
 		BE41A63C2ABF961F00BD47F9 /* LoginPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE41A63B2ABF961F00BD47F9 /* LoginPayload.swift */; };
+		BE41A6412AC0A08F00BD47F9 /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE41A6402AC0A08F00BD47F9 /* Overlay.swift */; };
 		BE92595E2ABC62A90069ACE8 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE92595D2ABC62A90069ACE8 /* test.swift */; };
 		BEC55C382ABCA36900D48980 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC55C362ABCA36900D48980 /* CustomTextFieldView.swift */; };
 		BEC55C392ABCA36900D48980 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC55C372ABCA36900D48980 /* CustomButton.swift */; };
@@ -47,7 +48,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		823B36E52ABA609500462B78 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		BE1016432ABCC72D0026F422 /* ProfileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileList.swift; sourceTree = "<group>"; };
 		BE187B172ABA1900008C4EE0 /* Free Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Free_LunchApp.swift; sourceTree = "<group>"; };
@@ -58,6 +58,7 @@
 		BE41A6362ABED8B900BD47F9 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BE41A6392ABF948F00BD47F9 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		BE41A63B2ABF961F00BD47F9 /* LoginPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPayload.swift; sourceTree = "<group>"; };
+		BE41A6402AC0A08F00BD47F9 /* Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
 		BE92595D2ABC62A90069ACE8 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		BEC55C362ABCA36900D48980 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 		BEC55C372ABCA36900D48980 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -99,14 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		823B36E42ABA607700462B78 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				823B36E52ABA609500462B78 /* Color + Extension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		BE187B0E2ABA18FF008C4EE0 = {
 			isa = PBXGroup;
 			children = (
@@ -127,10 +120,10 @@
 		BE187B192ABA1900008C4EE0 /* Free Lunch */ = {
 			isa = PBXGroup;
 			children = (
+				BE41A63E2AC0A02D00BD47F9 /* Models */,
 				BE41A6382ABF947600BD47F9 /* ViewModels */,
 				BEDCA7772ABC4DD800F0CCA3 /* Views */,
 				BEDCA7762ABC4D6E00F0CCA3 /* Components */,
-				823B36E42ABA607700462B78 /* Extension */,
 				BE187B2A2ABA19B2008C4EE0 /* Base */,
 				BE187B1A2ABA1900008C4EE0 /* Free_LunchApp.swift */,
 				BE187B1E2ABA1901008C4EE0 /* Assets.xcassets */,
@@ -150,7 +143,7 @@
 		BE187B2A2ABA19B2008C4EE0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				BE41A63D2ABF963B00BD47F9 /* PayloadModel */,
+				BE41A63F2AC0A07600BD47F9 /* ViewComponents */,
 				BE41A6352ABED46A00BD47F9 /* AppState */,
 				BE187B2B2ABA19CF008C4EE0 /* Api */,
 			);
@@ -188,6 +181,22 @@
 				BE41A63B2ABF961F00BD47F9 /* LoginPayload.swift */,
 			);
 			path = PayloadModel;
+			sourceTree = "<group>";
+		};
+		BE41A63E2AC0A02D00BD47F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE41A63D2ABF963B00BD47F9 /* PayloadModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE41A63F2AC0A07600BD47F9 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				BE41A6402AC0A08F00BD47F9 /* Overlay.swift */,
+			);
+			path = ViewComponents;
 			sourceTree = "<group>";
 		};
 		BEDCA7762ABC4D6E00F0CCA3 /* Components */ = {
@@ -335,6 +344,7 @@
 				BE187B2F2ABA1A18008C4EE0 /* EndPoints.swift in Sources */,
 				BEDCA7852ABC505800F0CCA3 /* LunchDetailsView.swift in Sources */,
 				BE187B1B2ABA1900008C4EE0 /* Free_LunchApp.swift in Sources */,
+				BE41A6412AC0A08F00BD47F9 /* Overlay.swift in Sources */,
 				BEDCA77F2ABC4FC600F0CCA3 /* RedeemLunchSuccessfulView.swift in Sources */,
 				BEDCA76B2ABC4B1700F0CCA3 /* LeaderBoardList.swift in Sources */,
 			);

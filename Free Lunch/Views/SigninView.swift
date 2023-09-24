@@ -13,6 +13,7 @@ struct SigninView: View {
     @StateObject private var lvm = LoginVM()
     
     var body: some View {
+        LoadingOverlay(isLoading: lvm.state == .submitting){
             VStack {
                 TopLabel()
                     .padding(.bottom, 20)
@@ -23,26 +24,14 @@ struct SigninView: View {
                     .padding(.bottom, 40)
                 Button {
                     Task {
-                      await  lvm.loginUser()
+                        await  lvm.loginUser()
                     }
-//                    switch lvm.state{
-//                    case .successful:
-//                       print("success")
-//                        return
-//                    case .unsuccessful:
-//                        print(lvm.error!)
-//                        return
-//                    case .submitting:
-//                        return
-//                    case .none:
-//                        print("it is null")
-//                    }
-                   
+                    
                 } label: {
                     
                     PrimaryButton(text:  "Sign In")
                 }
-
+                
                 
                 
                 Spacer()
@@ -64,7 +53,8 @@ struct SigninView: View {
             .fullScreenCover(isPresented: $isSignUpActive) {
                 SignupView()
             }
-        .modifier(HideKeyboardOnTap())
+            .modifier(HideKeyboardOnTap())
+        }
     }
 }
 
@@ -94,3 +84,7 @@ struct TopLabel: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
+
+
+
+
