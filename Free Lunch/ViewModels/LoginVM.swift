@@ -29,22 +29,23 @@ class LoginVM: ObservableObject{
     @Published private(set) var state : SubmissionState?
     @Published private(set) var error: NetworkingManager.NetworkingError?
     @Published var hasError: Bool = false
+    @Published private(set) var loginStatusCode : Int?
   
     @MainActor
-     func loginUser() async{
-         do{
- //            try validator.validate(person: person)
-             
+     func loginUser() async {
+         do{             
              state = .submitting
              let encoder = JSONEncoder()
              encoder.keyEncodingStrategy = .useDefaultKeys
              let data = try? encoder.encode(person)
-             self.userInfo = try await NetworkingManager.shared.request(endpoint: .create(loginData: data), type: logins.self).data
-             print("Succesful")
+             let response = try await NetworkingManager.shared.request(endpoint: .signIn(loginData: data), type: logins.self)
+             self.userInfo = response.data
+             self.loginStatusCode = response.statusCode
+             print("Succesful \(String(describing: loginStatusCode))")
 
              if let accessToken = self.userInfo?.accessToken {
-                 UserDefaults.standard.setValue(self.userInfo?.accessToken, forKey: "accessToken")
-                         }
+                 UserDefaults.standard.setValue(accessToken, forKey: "accessToken")
+             }
              state = .successful
          }catch{
              print("UnSuccesful")
@@ -55,7 +56,7 @@ class LoginVM: ObservableObject{
              } else{
                  self.error = .custom(error: error)
              }
-             print(self.error)
+             print(self.error ?? .custom(error: error))
          }
          
      }
